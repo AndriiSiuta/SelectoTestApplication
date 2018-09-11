@@ -1,0 +1,25 @@
+<header class="dashboard-header additional-shadow">
+  <div class="dashboard-header__dashboard">
+    <a
+      [routerLink]="['/dashboard']"
+    >
+      Dashboard
+    </a>
+  </div>
+
+  <div class="dashboard-header__weekend">
+    <a
+      [routerLink]="['/weekend']"
+    >
+      Weekend
+    </a>
+  </div>
+</header>
+
+<div class="dashboard-container">
+  <div class="dashboard-pseudo-table additional-shadow">
+    <ng-container *ngIf="weatherData$ | async as weathers">
+      <dashboard-item [currentWeather]="sortWeather(weathers)"></dashboard-item>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+@import "common/styles/_colors";
+@import "common/styles/_vars";
+
+.html,body {
+  height: 100%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+  .mat-button {
+    outline: 0;
+  }
+}
+
+//body {
+//  overflow: hidden;
+//}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px silver;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px silver;
+}

@@ -1,0 +1,23 @@
+<table
+  class="weather-table"
+  mat-table
+  [dataSource]="dataSource"
+>
+  <ng-container matColumnDef="Capital">
+    <th mat-header-cell *matHeaderCellDef>Capital</th>
+    <td mat-cell *matCellDef="let element">{{ element.country }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="Temperature">
+    <th mat-header-cell *matHeaderCellDef>Temperature</th>
+    <td mat-cell *matCellDef="let element">{{ element.temperature.toFixed(1) }}C&#176;</td>
+  </ng-container>
+
+  <ng-container matColumnDef="WeatherCondition">
+    <th mat-header-cell *matHeaderCellDef>Weather condition</th>
+    <td mat-cell *matCellDef="let element">{{ element.weather_condition }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

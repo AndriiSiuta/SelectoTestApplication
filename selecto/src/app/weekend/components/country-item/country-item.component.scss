@@ -1,0 +1,11 @@
+@import 'colors.scss';
+
+:host {
+  padding: 0.5rem;
+  display: flex;
+  border-top: 1px solid rgba(0,0,0,.12);
+
+  justify-content: space-around;
+  align-items: center;
+
+}

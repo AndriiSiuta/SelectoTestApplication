@@ -1,0 +1,35 @@
+@import 'colors.scss';
+
+:host {
+  display: flex;
+  color: rgba(0,0,0, 0.54);
+  font-size: 1em;
+
+  padding: 30px;
+  border-top: 1px solid rgba(0,0,0,.12);
+}
+
+table {
+  width: 100%;
+
+  th {
+    text-align: center;
+  }
+
+  td {
+    text-align: center;
+  }
+}
+
+.weather-table {
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+
+  .mat-row:first-child {
+    background-color: $cold-background!important;
+  }
+
+  .mat-row:last-child {
+    background-color: $warm-background!important;
+  }
+}
+

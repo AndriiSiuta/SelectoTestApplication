@@ -1,0 +1,25 @@
+<add-country
+  [countriesId]="countriesId$ | async"
+  (createdCountry)="addNewCountry($event)"
+></add-country>
+
+<div class="country-list">
+  <ng-container *ngIf="countries$ | async as countries">
+    <refresh-button
+      [allCountries]="countries"
+      (resetData)="resetStoreCountries($event)"
+    ></refresh-button>
+    <country-item
+      *ngFor="let country of countries"
+      [country]="country"
+      title="Click on name of country to delete"
+      (countryStatus)="updateCountryState($event)"
+      (clickDelete)="deleteCountry($event)"
+      [class.visited]="country.visited === true"
+      [class.wantVisit]="country.want_visit === true"
+    >
+    </country-item>
+  </ng-container>
+</div>
+
+
