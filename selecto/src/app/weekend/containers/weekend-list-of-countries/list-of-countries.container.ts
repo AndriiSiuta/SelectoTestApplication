@@ -44,7 +44,7 @@ export class ListOfCountriesContainer {
     this.store.dispatch(new SetAllCountries(initialCountries));
   }
 
-  deleteCountry(id: number) {
+  deleteCountry(id: any) {
     this.store.dispatch(new DeleteCountry(id.toString()));
   }
 
